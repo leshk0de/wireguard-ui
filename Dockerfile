@@ -51,7 +51,7 @@ RUN rice embed-go && \
     CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -a -o wg-ui .
 
 # Release stage
-FROM alpine:3.11
+FROM alpine:3.23.2
 
 RUN addgroup -S wgui && \
     adduser -S -D -G wgui wgui
